@@ -1,0 +1,825 @@
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" checked="checked" /><span title="Character"></span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2" /><span title="Threats & Backpack"></span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab3" value="3" /><span title="Dependants"></span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab4" value="4" /><span title="Notes"></span>
+<!-- <input type="radio" name="attr_tab" class="sheet-tab sheet-tab5" value="5" /><span title="Part-Timers"></span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab5" value="6" /><span title="Full-Timers"></span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab5" value="7" /><span title="Management"></span>
+
+-->
+
+<div class="sheet-tab-content sheet-tab1">
+    <h1>RED MARKETS</h1>
+    
+   <tr>
+   <table class="sheet-black">
+               
+    <tr><th>Taker</th>
+    <th>&nbsp;<input type="text" name="attr_Taker" /></th>
+    </tr>
+        
+    <tr><th>Crew</th>
+    <th>&nbsp;<input type="text" name="attr_Crew" /></th>
+    </tr>
+          
+    <tr><th>Weak Spot</th>
+    <th>&nbsp;<input type="text" name="attr_Weak_Spot" /></th> 
+    </tr>
+    
+    <tr><th>Soft Spot</th>
+    <th>&nbsp;<input type="text" name="attr_Soft_Spot" /></th>
+    </tr>
+
+    <tr><th>Tough Spot</th>
+    <th>&nbsp;<select name="attr_Tough_Spot" />
+      <option value="1">Lost</option>
+      <option value="2">Bait</option>
+      <option value="3">Latent</option>
+      <option value="4">Immune</option>
+      <option value="5">Believer</option>
+      <option value="6">Steward</option>
+      <option value="7">Hustler</option>
+      <option value="8">Fenceman</option>
+      <option value="9">Scavenger</option>
+      <option value="10">Roach</option>
+      </select>
+    </tr>
+ </table>
+        <br>
+
+<tr><th><h1>Potential&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Skills</h1></th>
+ <br>
+
+ </tr>
+ </table>
+ <tr>
+ 
+   <table class="sheet-black">
+<tr><th><h2>STR</h2></th>
+
+ <td>&nbsp;<select name="attr_STR" class="sheet-skill_select" />
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>
+       
+
+<th>Haul</th>
+
+ <td>&nbsp;<select name="attr_Haul" class="sheet-skill_select" />
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>
+      <tr>
+    
+    <th>Unarmed</th>
+
+ <td>&nbsp;<select name="attr_unarmed" class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+       
+        <button type="roll" value="&{template:default} {{name=Unarmed}} {{Black= [[1d10]] +@{unarmed}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+       
+       <th><input type="text" name="attr_STR_1" /></th>
+
+ <td>&nbsp;<select name="attr_STR1"  class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>   
+      
+     <button type="roll" value="&{template:default} {{name=@{STR_1}}} {{Black= [[1d10]] +@{STR1}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+      <tr>
+      
+       <th>Melee</th>
+
+ <td>&nbsp;<select name="attr_Melee" class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+      
+       <button type="roll" value="&{template:default} {{name=Melee}} {{Black= [[1d10]] +@{Melee}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+      
+      <th><input type="text" name="attr_STR_2" /></th>
+
+ <td>&nbsp;<select name="attr_STR2" class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+      
+      <button type="roll" value="&{template:default} {{name=@{STR_2}}} {{Black= [[1d10]] +@{STR2}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+      
+      <tr>
+          
+   
+       
+        
+        <th>Resistance</th>
+
+ <td>&nbsp;<select name="attr_Resistance" class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+       
+        <button type="roll" value="&{template:default} {{name=Resistance}} {{Black= [[1d10]] +@{Resistance}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+       
+         <th><input type="text" name="attr_STR_3" /></th>
+
+ <td>&nbsp;<select name="attr_STR3" class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+       
+       <button type="roll" value="&{template:default} {{name=@{STR_3}}} {{Black= [[1d10]] +@{STR3}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+       
+       </td>
+ </tr>
+ </table>
+<br>
+    <table>
+    <tr>
+        
+        <table class="sheet-black">
+            
+        <tr><th><h2>SPD</h2></th>
+
+ <td>&nbsp;<select name="attr_SPD" class="sheet-skill_select" />
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>></select>
+      
+      
+       <th>Athletics</th>
+
+ <td>&nbsp;<select name="attr_Athletics" class="sheet-skill_select" />
+    <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+       
+        <button type="roll" value="&{template:default} {{name=Athletics}} {{Black= [[1d10]] +@{Athletics}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+      <tr> 
+      
+      <th>Shoot</th>
+    
+ <td>&nbsp;<select name="attr_shoot" class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>   
+      
+      <button type="roll" value="&{template:default} {{name=Shoot}} {{Black= [[1d10]] +@{shoot}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+      
+            
+       <th><input type="text" name="attr_SPD_1" /></th>
+
+ <td>&nbsp;<select name="attr_SPD1" class="sheet-skill_select" />
+     <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+      
+       <button type="roll" value="&{template:default} {{name=@{SPD_1}}} {{Black= [[1d10]] +@{SPD1}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+      
+      <tr>
+          <th>Stealth</th>
+
+ <td>&nbsp;<select name="attr_stealth" class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>   
+     
+      <button type="roll" value="&{template:default} {{name=Stealth}} {{Black= [[1d10]] +@{stealth}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+     
+     <th><input type="text" name="attr_SPD_2" /></th>
+
+ <td>&nbsp;<select name="attr_SPD2" class="sheet-skill_select" />
+    <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>   
+    
+     <button type="roll" value="&{template:default} {{name=@{SPD_2}}} {{Black= [[1d10]] +@{SPD2}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+     
+       </td>
+       
+        
+    
+</tr>
+</table>
+<br>
+<table>
+    <tr>
+        <table class="sheet-black">
+        <th><h2>ADP</h2></th>
+
+ <td>&nbsp;<select name="attr_ADP" class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>
+       
+
+<th>Refresh</th>
+
+ <td>&nbsp;<select name="attr_Refresh" class="sheet-skill_select" />
+   <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+      <tr>
+    
+    <th>Awareness</th>
+
+ <td>&nbsp;<select name="attr_Awareness" class="sheet-skill_select" />
+     <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+      
+       <button type="roll" value="&{template:default} {{name=Awareness}} {{Black= [[1d10]] +@{Awareness}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button> 
+       
+       <th>Self-Control</th>
+
+ <td>&nbsp;<select name="attr_Self_Control" class="sheet-skill_select" />
+     <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+      
+       <button type="roll" value="&{template:default} {{name=Self-Control}} {{Black= [[1d10]] +@{Self_Control}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+      <tr>
+      
+       <th>Scavenging</th>
+
+ <td>&nbsp;<select name="attr_Scavenging" class="sheet-skill_select" />
+   <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+      
+       <button type="roll" value="&{template:default} {{name=Scavenging}} {{Black= [[1d10]] +@{Scavenging}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+      
+      <th>Drive</th>
+
+ <td>&nbsp;<select name="attr_Drive" class="sheet-skill_select" />
+     <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+      
+       <button type="roll" value="&{template:default} {{name=Drive}} {{Black= [[1d10]] +@{Drive}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+      <tr>
+     <th>Criminality</th>
+
+ <td>&nbsp;<select name="attr_Criminality" class="sheet-skill_select" />
+    <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>    
+       
+        <button type="roll" value="&{template:default} {{name=Criminality}} {{Black= [[1d10]] +@{Criminality}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+       
+       </td>
+        
+    </tr>
+ </table>
+ 
+ <br>
+    <table>
+    <tr>
+        
+        <table class="sheet-black">
+            
+        <tr><th><h2>INT</h2></th>
+
+ <td>&nbsp;<select name="attr_INT" class="sheet-skill_select" />
+<option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+
+    <th>Foresight</th>
+    
+ <td>&nbsp;<select name="attr_Foresight" class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+      
+      <button type="roll" value="&{template:default} {{name=Foresight}} {{Black= [[1d10]] +@{Foresight}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+      
+       
+      <th><input type="text" name="attr_INT_1" /></th>
+
+ <td>&nbsp;<select name="attr_INT1" class="sheet-skill_select" />
+    <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+       <button type="roll" value="&{template:default} {{name=@{INT_1}}} {{Black= [[1d10]] +@{INT1}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+      <tr>
+      
+          <th>Profession</th>
+
+ <td>&nbsp;<select name="attr_Profession" class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+       
+        <button type="roll" value="&{template:default} {{name=Profession}} {{Black= [[1d10]] +@{Profession}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+          
+            
+            
+            <th>Research</th>
+
+ <td>&nbsp;<select name="attr_Research" class="sheet-skill_select" />
+  <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>   
+     
+      <button type="roll" value="&{template:default} {{name=Research}} {{Black= [[1d10]] +@{Research}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+     
+    
+      
+       <th><input type="text" name="attr_INT_2" /></th>
+
+ <td>&nbsp;<select name="attr_INT2" class="sheet-skill_select" />
+   <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+       <button type="roll" value="&{template:default} {{name=@{INT_2}}} {{Black= [[1d10]] +@{INT2}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+      <tr>
+          
+           <th>Mechanics</th>
+
+ <td>&nbsp;<select name="attr_Mechanics" class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+       
+        <button type="roll" value="&{template:default} {{name=Mechanics}} {{Black= [[1d10]] +@{Mechanics}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+       
+      <th>First Aid</th>
+
+ <td>&nbsp;<select name="attr_First_Aid" class="sheet-skill_select" />
+    <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>   
+     
+      <button type="roll" value="&{template:default} {{name=First_Aid}} {{Black= [[1d10]] +@{First_Aid}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+     
+     
+    
+       </td>
+        <tr>
+        
+    
+</tr>
+</table>
+
+
+ <br>
+    <table>
+    <tr>
+        
+        <table class="sheet-black">
+            
+        <tr><th><h2>CHA</h2></th>
+
+ <td>&nbsp;<select name="attr_CHA" class="sheet-skill_select" />
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>
+       
+
+    <th>Networking</th>
+    
+ <td>&nbsp;<select name="attr_Networking" class="sheet-skill_select" />
+    <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+      
+      <button type="roll" value="&{template:default} {{name=Networking}} {{Black= [[1d10]] +@{Networking}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+       
+      <th>Persuasion</th>
+
+ <td>&nbsp;<select name="attr_Persuasion" class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+       
+        <button type="roll" value="&{template:default} {{name=Persuasion}} {{Black= [[1d10]] +@{Persuasion}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+        <td>
+       
+       <th>Sensitivity</th>
+
+ <td>&nbsp;<select name="attr_Sensitivity" class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>    
+      
+      <button type="roll" value="&{template:default} {{name=Sensitivity}} {{Black= [[1d10]] +@{Sensitivity}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+      <tr>
+      
+            <th>Deception</th>
+
+ <td>&nbsp;<select name="attr_Deception" class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>   
+     
+      <button type="roll" value="&{template:default} {{name=Deception}} {{Black= [[1d10]] +@{Deception}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+     
+     <th>Intimidation</th>
+
+ <td>&nbsp;<select name="attr_Intimidation" class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>  
+       
+        <button type="roll" value="&{template:default} {{name=Intimidation}} {{Black= [[1d10]] +@{Intimidation}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+       
+      <th>Leadership</th>
+
+ <td>&nbsp;<select name="attr_Leadership" class="sheet-skill_select" />
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option></select>    
+     
+      <button type="roll" value="&{template:default} {{name=Leadership}} {{Black= [[1d10]] +@{Leadership}}}  {{+ ?{Modifier|0}}} {{vs Red= [[1d10]]}}" /></button>
+     
+     
+     
+    
+       </td>
+    
+        
+        <tr>
+            
+            
+        
+    
+</tr>
+</table>
+
+ 
+<br>
+    <table>
+    <tr>
+        
+        <table class="sheet-black">
+            
+        <tr><th><h2>WIL</h2></th>
+
+ <td>&nbsp;<select name="attr_CHA" class="sheet-skill_select" />
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">3</option>
+      <option value="5">4</option>
+      <option value="6">5</option></select>
+      <tr>
+</table>
+
+<tr>   <table><select name="attr_Head" class="sheet-hit_select" />
+      <option value="0"></option>
+      <option value="1">/</option>
+      <option value="2">X</option>
+       <th>Test damage button</th>
+</table>
+</div>
+
+<div class="sheet-tab-content sheet-tab2">
+    <h1>RED MARKETS</h1>
+ 
+ <table>
+     
+     <table class="sheet-black">
+       <th><h3>Threats</h3><td></td>
+       <tr><th>Detachment
+       <td>&nbsp;<input type="checkbox" name="attr_Det1"/>
+       <input type="checkbox" name="attr_Det2"/>
+       <input type="checkbox" name="attr_Det3"/>
+       <input type="checkbox" name="attr_Det4"/>
+       <input type="checkbox" name="attr_Det5"/>
+       <input type="radio" name="attr_DetCrack"/>
+       <input type="checkbox" name="attr_Det6"/>
+       <input type="checkbox" name="attr_Det7"/>
+       <input type="checkbox" name="attr_Det8"/>
+       <input type="checkbox" name="attr_Det9"/>
+       <input type="checkbox" name="attr_Det10"/>
+       <input type="radio" name="attr_DetCrumble"/>
+       <input type="checkbox" name="attr_Det11"/>
+       <input type="checkbox" name="attr_Det12"/>
+       <input type="checkbox" name="attr_Det13"/>
+       <input type="checkbox" name="attr_Det14"/>
+       <input type="checkbox" name="attr_Det15"/>
+       <input type="radio" name="attr_DetBreak"/>
+       </th>
+       
+       
+       
+       
+       <tr><th>Stress
+       <td>&nbsp;<input type="checkbox" name="attr_Stress1"/>
+       <input type="checkbox" name="attr_Stress2"/>
+       <input type="checkbox" name="attr_Stress3"/>
+       <input type="checkbox" name="attr_Stress4"/>
+       <input type="checkbox" name="attr_Stress5"/>
+       <input type="radio" name="attr_StressCrack"/>
+       <input type="checkbox" name="attr_Stress6"/>
+       <input type="checkbox" name="attr_Stress7"/>
+       <input type="checkbox" name="attr_Stress8"/>
+       <input type="checkbox" name="attr_Stress9"/>
+       <input type="checkbox" name="attr_Stress10"/>
+       <input type="radio" name="attr_StressCrumble"/>
+       <input type="checkbox" name="attr_Stress11"/>
+       <input type="checkbox" name="attr_Stress12"/>
+       <input type="checkbox" name="attr_Stress13"/>
+       <input type="checkbox" name="attr_Stress14"/>
+       <input type="checkbox" name="attr_Stress15"/>
+       <input type="radio" name="attr_StressBreak"/>
+       </th>
+      
+       <tr><th>Trauma
+       <td>&nbsp;<input type="checkbox" name="attr_Trauma1"/>
+       <input type="checkbox" name="attr_Trauma2"/>
+       <input type="checkbox" name="attr_Trauma3"/>
+       <input type="checkbox" name="attr_Trauma4"/>
+       <input type="checkbox" name="attr_Trauma5"/>
+       <input type="radio" name="attr_TraumaCrack"/>
+       <input type="checkbox" name="attr_Trauma6"/>
+       <input type="checkbox" name="attr_Trauma7"/>
+       <input type="checkbox" name="attr_Trauma8"/>
+       <input type="checkbox" name="attr_Trauma9"/>
+       <input type="checkbox" name="attr_Trauma10"/>
+       <input type="radio" name="attr_TraumaCrumble"/>
+       <input type="checkbox" name="attr_Trauma11"/>
+       <input type="checkbox" name="attr_Trauma12"/>
+       <input type="checkbox" name="attr_Trauma13"/>
+       <input type="checkbox" name="attr_Trauma14"/>
+       <input type="checkbox" name="attr_Trauma15"/>
+       <input type="radio" name="attr_TraumaBreak"/>
+       </th>
+       
+
+   
+</sheet>
+</table>
+</div>
+
+
+
+
+
+       
+          
+                
+
+
+
+
+<div class="sheet-tab-content sheet-tab3">
+    
+    <h1>RED MARKETS</h1>
+   
+    <table class="noBorder centeredTable">
+                            <tbody><tr class="noBorder">
+                                <td class="noBorder"></td>
+                                <td class="noBorder centerText">
+                                    <h4 class="centerText">Head:</h4>
+                                    <img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0"id="head1" onclick="changePic('head1')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="head2" onclick="changePic('head2')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="head3" onclick="changePic('head3')">
+                                    <br><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="head4" onclick="changePic('head4')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="head5" onclick="changePic('head5')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="head6" onclick="changePic('head6')">
+                                    <br><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="head7" onclick="changePic('head7')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="head8" onclick="changePic('head8')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="head9" onclick="changePic('head9')">
+                                    <br><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="head10" onclick="changePic('head10')">
+                                </td>
+                                <td class="noBorder"></td>
+                            </tr>
+                            <tr class="noBorder">
+                                <td class="noBorder">
+                                    <h4>RArm:</h4>
+                                    <img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rarm1" onclick="changePic('rarm1')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rarm2" onclick="changePic('rarm2')">&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <br><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rarm3" onclick="changePic('rarm3')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rarm4" onclick="changePic('rarm4')">&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <br><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rarm5" onclick="changePic('rarm5')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rarm6" onclick="changePic('rarm6')">&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <br><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rarm7" onclick="changePic('rarm7')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rarm8" onclick="changePic('rarm8')">&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <br><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rarm9" onclick="changePic('rarm9')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rarm10" onclick="changePic('rarm10')">&nbsp;&nbsp;&nbsp;&nbsp;
+                                </td>
+                                <td class="noBorder centerText">
+                                    <h4>Body:</h4>
+                                    <img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body1" onclick="changePic('body1')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body2" onclick="changePic('body2')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body3" onclick="changePic('body3')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body4" onclick="changePic('body4')">
+                                    <br><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body5" onclick="changePic('body5')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body6" onclick="changePic('body6')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body7" onclick="changePic('body7')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body8" onclick="changePic('body8')">
+                                    <br><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body9" onclick="changePic('body9')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0"id="body10" onclick="changePic('body10')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body11" onclick="changePic('body11')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body12" onclick="changePic('body12')">
+                                    <br><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body13" onclick="changePic('body13')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body14" onclick="changePic('body14')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body15" onclick="changePic('body15')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body16" onclick="changePic('body16')">
+                                    <br><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body17" onclick="changePic('body17')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body18" onclick="changePic('body18')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body19" onclick="changePic('body19')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="body20" onclick="changePic('body20')">
+                                </td>
+                                <td class="noBorder">
+                                    <h4>LArm:</h4>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="larm1" onclick="changePic('larm1')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="larm2" onclick="changePic('larm2')">
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;<img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="larm3" onclick="changePic('larm3')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="larm4" onclick="changePic('larm4')">
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;<img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="larm5" onclick="changePic('larm5')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="larm6" onclick="changePic('larm6')">
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;<img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="larm7" onclick="changePic('larm7')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="larm8" onclick="changePic('larm8')">
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;<img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="larm9" onclick="changePic('larm9')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="larm10" onclick="changePic('larm10')">
+                                </td>
+                            </tr>
+                            <tr class="noBorder">
+                                <td class="noBorder"></td>
+                                <td class="noBorder centerText">
+                                    <h4>RLeg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LLeg</h4>
+                                    <img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rleg1" onclick="changePic('rleg1')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rleg2" onclick="changePic('rleg2')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="lleg1" onclick="changePic('lleg1')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="lleg2" onclick="changePic('lleg2')">
+                                    <br><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rleg3" onclick="changePic('rleg3')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rleg4" onclick="changePic('rleg4')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="lleg3" onclick="changePic('lleg3')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="lleg4" onclick="changePic('lleg4')">
+                                    <br><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rleg5" onclick="changePic('rleg5')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rleg6" onclick="changePic('rleg6')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="lleg5" onclick="changePic('lleg5')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="lleg6" onclick="changePic('lleg6')">
+                                    <br><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rleg7" onclick="changePic('rleg7')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rleg8" onclick="changePic('rleg8')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="lleg7" onclick="changePic('lleg7')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="lleg8" onclick="changePic('lleg8')">
+                                    <br><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rleg9" onclick="changePic('rleg9')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="rleg10" onclick="changePic('rleg10')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="lleg9" onclick="changePic('lleg9')"><img class="gBox" src="https://image.ibb.co/kSjA9p/GBox.png" alt="GBox" border="0" id="lleg10" onclick="changePic('lleg10')">
+                                </td>
+                                <td class="noBorder"></td>
+                            </tr>
+                        </tbody></table>
+    
+</div>
+
+<div class="sheet-tab-content sheet-tab4">
+   
+   <h1>RED MARKETS</h1>
+    <h3>Character History</h3>
+        <textarea class="sheet-textarea" name="attr_Character_History"></textarea>
+        <h3>Allies/Contacts</h3>
+        <textarea class="sheet-textarea" name="attr_Allies_Contacts"></textarea>
+        <h3>Notes</h3>
+        <textarea class="sheet-textarea" name="attr_Notes">
+        </textarea>
+
+
+		
+ <div class="sheet-tab-content sheet-tab5">
+   <h1>RED MARKETS</h1> 
+    <h3>Part-Timer NPCS</h3>
+    <tr>
+    <table class="sheet-black">
+   
+        <tr><th>Name</th>
+          <th>&nbsp;<input type="text" name="attr_name" </th>
+        </tr>
+       
+        <tr><th>Weapon Used</th>
+         <th>&nbsp;<input type="text" name="attr_weapon Used" /></th>
+        </tr>
+        
+        <tr><th>Trained?</th>
+          <th>&nbsp;<select name="attr_Trained?" />
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+          <td>&nbsp;<select name="attr_Trained?" class="sheet-skill_select" />
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option></select>
+      <tr>
+            
+        <tr><th>Armor</th>
+          <th>&nbsp;<select name="attr_Armor" />
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            
+  </table>
+
+  <tr><th>Head
+       <td>&nbsp;<input type="checkbox" name="attr_Det1"/>
+  <tr><th>Left Arm
+       <input type="checkbox" name="attr_Det2"/>
+  <tr><th>Right Arm      
+       <input type="checkbox" name="attr_Det3"/>
+  <tr><th>Torso 
+       <input type="checkbox" name="attr_Det4"/>
+  <tr><th>Left Leg
+       <input type="checkbox" name="attr_Det5"/>
+  <tr><th>Right Leg 
+       <input type="checkbox" name="attr_Det6"/>
+       
+       
+  <h3>Damage<tr>
+       <td>&nbsp;<input type="checkbox" name="attr_Det1"/>
+       <input type="checkbox" name="attr_Det2"/>
+       <input type="checkbox" name="attr_Det3"/>
+       <input type="checkbox" name="attr_Det4"/>
+       <input type="checkbox" name="attr_Det5"/>
+       <input type="checkbox" name="attr_Det6"/>
+       <input type="checkbox" name="attr_Det7"/>
+       <input type="checkbox" name="attr_Det8"/>
+       <input type="checkbox" name="attr_Det9"/>
+       <input type="checkbox" name="attr_Det10"/>
+
+    <h3>Notes</h3>
+        <textarea class="sheet-textarea" name="attr_Notes">
+        </textarea>
+		
+<div class="sheet-tab-content sheet-tab6">
+   
+   <h1>RED MARKETS</h1>
+    <h3>Full-Timer NPCS</h3>
+        <textarea class="sheet-textarea" name="attr_Character_History"></textarea>
+        <h3>Allies/Contacts</h3>
+        <textarea class="sheet-textarea" name="attr_Allies_Contacts"></textarea>
+        <h3>Notes</h3>
+        <textarea class="sheet-textarea" name="attr_Notes">
+        </textarea>
+		
+<div class="sheet-tab-content sheet-tab6">
+   
+   <h1>RED MARKETS</h1>
+    <h3>Management NPCS</h3>
+        <textarea class="sheet-textarea" name="attr_Character_History"></textarea>
+        <h3>Allies/Contacts</h3>
+        <textarea class="sheet-textarea" name="attr_Allies_Contacts"></textarea>
+        <h3>Notes</h3>
+        <textarea class="sheet-textarea" name="attr_Notes">
+        </textarea>
